@@ -302,7 +302,7 @@ const Post = ({ post, searchQuery }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit" 
-              className="mt-2 bg-green-600 text-white rounded px-4 py-2 hover:bg-green-700 transition duration-300"
+              className="mt-2 bg-green text-white rounded px-4 py-2 hover:bg-blue transition duration-300"
             >
               Submit
             </motion.button>
@@ -340,7 +340,7 @@ const Posts = ({ searchQuery }) => {
 
   if (loading) return (
     <div className="flex justify-center items-center h-64">
-      <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green-500"></div>
+      <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green"></div>
     </div>
   );
   

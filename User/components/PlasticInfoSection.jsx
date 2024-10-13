@@ -36,9 +36,9 @@ export default function PlasticInfoSection() {
     ];
 
     return (
-        <section className="bg-gray-100 py-16">
+        <section className="bg-white py-16">
             <div className="max-w-7xl mx-auto text-center px-4">
-                <h2 className="text-3xl font-bold text-green-600 mb-4">Let's save our mother Earth</h2>
+                <h2 className="text-4xl font-bold text-green mb-4">Let's save our mother Earth</h2>
                 <p className="text-gray-600 mb-12">
                 Together, we can create a future where every choice we make helps restore and preserve our planet for generations to come. Lets turn small actions into a global impact.
                 </p>
@@ -46,14 +46,14 @@ export default function PlasticInfoSection() {
                     {topics.map((topic, index) => (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out relative overflow-hidden"
+                            className="bg-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out relative overflow-hidden"
                         >
-                            <div className="mb-6 relative z-10 flex justify-center text-green-500">{topic.icon}</div>
-                            <h3 className="text-xl font-semibold mb-4 relative z-10 text-green-600">{topic.title}</h3>
-                            <p className="text-gray-600 mb-4 relative z-10">{topic.description}</p>
+                            <div className="mb-6 relative flex justify-center text-green">{topic.icon}</div>
+                            <h3 className="text-xl font-semibold mb-4 relative  text-blue">{topic.title}</h3>
+                            <p className="text-gray-600 mb-4 relative ">{topic.description}</p>
                             <button
                                 onClick={() => handleToggle(index)}
-                                className="text-green-500 font-semibold hover:text-green-600 focus:outline-none transition-colors duration-300 relative z-10"
+                                className="text-green font-semibold hover:text-green-600 focus:outline-none transition-colors duration-300 relative "
                             >
                                 {expandedIndex === index ? 'Show Less' : 'Read More'}
                             </button>

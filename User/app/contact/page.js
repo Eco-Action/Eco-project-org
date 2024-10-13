@@ -44,11 +44,11 @@ if (data.success) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-green-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+      <div className="bg-blue text-white py-16">
+        <div className="container mx-auto px-4 grid justify-center text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 pt-16">Contact Us</h1>
           <p className="text-xl text-green-100 max-w-2xl">
             We're here to help and answer any questions you might have. 
             We look forward to hearing from you.
@@ -61,7 +61,7 @@ if (data.success) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
-            <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-green">Send us a Message</h2>
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -73,7 +73,7 @@ if (data.success) {
                     id="firstName"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green focus:border-transparent"
                     placeholder="John"
                     required
                   />
@@ -123,7 +123,7 @@ if (data.success) {
               </div>
               <button
                 type="submit"
-                className={`w-full bg-green-600 text-white py-2 px-4 rounded-md ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-green-700'} transition-colors font-medium`}
+                className={`w-full bg-green text-white py-2 px-4 rounded-md ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blueD'} transition-colors font-medium`}
                 disabled={loading}
               >
                 {loading ? 'Sending...' : 'Send Message'}
@@ -134,22 +134,22 @@ if (data.success) {
           {/* Contact Information */}
           <div>
             <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-8">
-              <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-green">Contact Information</h2>
               <div className="space-y-4">
                 <ContactItem 
                   icon={<Phone className="h-6 w-6" />}
                   title="Phone"
-                  content="+1 (555) 123-4567"
+                  content="+962 782907153"
                 />
                 <ContactItem 
                   icon={<Mail className="h-6 w-6" />}
                   title="Email"
-                  content="support@ecofriendly.com"
+                  content="support@RePlastify.com"
                 />
                 <ContactItem 
                   icon={<MapPin className="h-6 w-6" />}
                   title="Address"
-                  content="123 Green Street, Eco City, EC 12345"
+                  content=" Alakarama Street, Zarqa City."
                 />
                 <ContactItem 
                   icon={<Clock className="h-6 w-6" />}
@@ -193,7 +193,7 @@ if (data.success) {
 function ContactItem({ icon, title, content }) {
   return (
     <div className="flex items-start">
-      <div className="flex-shrink-0 h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mr-4">
+      <div className="flex-shrink-0 h-12 w-12 bg-green rounded-lg flex items-center justify-center text-green-600 mr-4">
         {icon}
       </div>
       <div>
@@ -206,7 +206,7 @@ function ContactItem({ icon, title, content }) {
 
 function FAQItem({ question, answer }) {
   return (
-    <div className="border-l-4 border-green-500 pl-4">
+    <div className="border-l-4 border-green pl-4">
       <h3 className="text-lg font-medium text-gray-900 mb-2">{question}</h3>
       <p className="text-gray-600">{answer}</p>
     </div>

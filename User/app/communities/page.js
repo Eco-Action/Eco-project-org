@@ -14,7 +14,7 @@ const TabButton = ({ active, onClick, children }) => (
     whileTap={{ scale: 0.95 }}
     className={`w-full px-4 py-3 font-medium text-sm text-left rounded-lg transition-colors duration-300 ${
       active
-        ? 'bg-green-600 text-white shadow-md'
+        ? 'bg-green text-white shadow-md'
         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
     }`}
     onClick={onClick}
@@ -58,12 +58,12 @@ const CommunityPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-20">
       <motion.h1 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl font-bold text-center text-green-600 mb-8"
+        className="text-4xl font-bold text-center text-green mb-8"
       >
         Eco Community
       </motion.h1>
@@ -83,11 +83,11 @@ const CommunityPage = () => {
             placeholder="Search for posts, events, or topics..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition duration-300 bg-white shadow-sm"
+            className="w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent transition duration-300 bg-white shadow-sm"
           />
           <button
             onClick={() => {/* Implement search functionality */}}
-            className="absolute inset-y-0 right-0 flex items-center px-4 text-white bg-green-600 rounded-r-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300"
+            className="absolute inset-y-0 right-0 flex items-center px-4 text-white bg-green rounded-r-lg hover:bg-green focus:outline-none focus:ring-2 focus:ring-green focus:ring-offset-2 transition duration-300"
           >
             Search
           </button>

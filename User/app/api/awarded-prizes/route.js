@@ -24,6 +24,7 @@ export async function GET(request) {
     // Fetch awarded prizes for the user
     const awardedPrizes = await AwardedPrize.find({ userId: decoded.id })
       .sort({ awardedAt: -1 })
+      // .limit(3) // Limit to 3 results
       .populate('prizeId', 'name description');
 
     return NextResponse.json({ awardedPrizes });

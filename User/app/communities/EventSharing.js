@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 const EventCard = ({ event }) => (
   <div className="bg-white rounded-lg shadow-md p-4 mb-4">
-    <h3 className="text-lg font-semibold text-green-600 mb-2">{event.title}</h3>
+    <h3 className="text-lg font-semibold text-green mb-2">{event.title}</h3>
     <p className="text-sm text-gray-600 mb-2">{new Date(event.date).toLocaleDateString()}</p>
     <p className="text-sm text-gray-700 mb-2">{event.description}</p>
-    <p className="text-sm font-medium text-green-500">Location: {event.location}</p>
+    <p className="text-sm font-medium text-green">Location: {event.location}</p>
   </div>
 );
 

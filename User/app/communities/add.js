@@ -91,13 +91,13 @@ const AddContent = () => {
 
   return (
     <div className="mt-4">
-      <h2 className="text-2xl font-bold text-green-600 mb-4">Add New Content</h2>
+      <h2 className="text-2xl font-bold text-green mb-4">Add New Content</h2>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="bg-white p-4 rounded-lg shadow">
           <h3 className="text-lg font-semibold mb-2">Add New Post</h3>
           <button
             onClick={() => setIsModalOpen(true)} // Open the modal on button click
-            className="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            className="mt-2 bg-green text-white px-4 py-2 rounded hover:bg-blue"
           >
             Create Post
           </button>
@@ -106,7 +106,7 @@ const AddContent = () => {
           <h3 className="text-lg font-semibold mb-2">Add New Event</h3>
           <button
             onClick={() => setIsEventModalOpen(true)} // Open the event modal on button click
-            className="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            className="mt-2 bg-green text-white px-4 py-2 rounded hover:bg-blue"
           >
             Create Event
           </button>
@@ -138,7 +138,7 @@ const AddContent = () => {
                 </button>
                 <button
                   type="submit"
-                  className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                  className="bg-green text-white px-4 py-2 rounded hover:bg-blue"
                 >
                   Create Post
                 </button>
@@ -205,7 +205,7 @@ const AddContent = () => {
                 </button>
                 <button
                   type="submit"
-                  className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                  className="bg-green text-white px-4 py-2 rounded hover:bg-blue"
                 >
                   Create Event
                 </button>

@@ -16,13 +16,13 @@ export default function EcoAboutUs() {
           />
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">For a Greener Tomorrow</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-green mb-6">For a Greener Tomorrow</h1>
           <p className="text-xl text-gray-200 max-w-2xl">
             Since 2010, we've been at the forefront of environmental conservation. 
             More than just a company, we're a movement dedicated to reducing carbon 
             emissions and preserving our planet for future generations.
           </p>
-          <button className="mt-8 inline-flex items-center px-6 py-3 bg-white text-green-900 rounded-full font-semibold hover:bg-green-50 transition-colors">
+          <button className="mt-8 inline-flex items-center px-6 py-3 bg-white text-green rounded-full font-semibold hover:bg-green-50 transition-colors">
             Join Our Mission <ChevronRight className="ml-2 h-5 w-5" />
           </button>
         </div>
@@ -58,7 +58,7 @@ export default function EcoAboutUs() {
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Green Mission</h2>
+            <h2 className="text-3xl font-bold text-green mb-8">Our Green Mission</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
               We're committed to leading the charge against climate change. By implementing 
               sustainable practices and innovative green technologies, we're working to 
@@ -97,7 +97,7 @@ function FeatureCard({ icon, title, description }) {
 function StatCard({ number, label }) {
   return (
     <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 text-center">
-      <div className="text-4xl font-bold text-green-600 mb-2">{number}</div>
+      <div className="text-4xl font-bold text-green mb-2">{number}</div>
       <div className="text-gray-600">{label}</div>
     </div>
   );
