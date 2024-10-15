@@ -106,7 +106,7 @@ const ChallengeList = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      <header className="bg-blue text-white py-12 px-4 sm:px-6 lg:px-8 shadow-lg pt-24">
+      <header className=" text-blue py-12 px-4 sm:px-6 lg:px-8  pt-24">
         <motion.h1
           className="text-5xl font-bold text-center mb-8"
           initial={{ opacity: 0, y: -20 }}
@@ -121,7 +121,7 @@ const ChallengeList = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex items-center bg-white rounded-md shadow-md overflow-hidden">
+          <div className="flex items-center  border-2  border-blue  bg-white rounded-md shadow-md overflow-hidden">
             <Search className="w-6 h-6 text-green ml-4" />
             <input
               type="text"

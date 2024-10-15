@@ -55,7 +55,7 @@ const AwardWinningAuthors = () => {
   };
 
   if (loading) return <div className="flex justify-center items-center h-screen ml-64">
-    <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green-500"></div>
+    <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green"></div>
   </div>;
   
   if (error) return <div className="ml-64 p-4 text-red-500 bg-red-100 rounded-lg shadow">Error: {error}</div>;
@@ -63,15 +63,15 @@ const AwardWinningAuthors = () => {
   if (awardedUsers.length === 0) return <div className="ml-64 p-4 text-gray-500 bg-gray-100 rounded-lg shadow">No awarded users found</div>;
 
   return (
-    <div className="ml-64 p-6">
-      <h1 className="text-3xl font-bold mb-6 text-green-600">Award-Winning Authors</h1>
+    <div className="ml-64 p-20">
+      <h1 className="text-3xl font-bold mb-6 text-green">Award-Winning Authors</h1>
       <div className="mb-6 relative">
         <input
           type="text"
           placeholder="Search by author or prize name"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-3 pl-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          className="w-full p-3 pl-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent"
         />
         <Search className="absolute left-3 top-3 text-gray-400" size={20} />
       </div>

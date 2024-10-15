@@ -275,7 +275,7 @@ const UserProfile = () => {
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(2);
+  const [itemsPerPage] = useState(3);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -450,6 +450,7 @@ const UserProfile = () => {
               <ul>
                 {currentItems.map((prize) => (
                   <li key={prize._id} className="mb-4 p-4 border border-gray-200 rounded">
+                    
                     <p className="font-semibold">{prize.prizeId.name}</p>
                     <p className="text-sm text-gray-600">{prize.prizeId.description}</p>
                     <p className="text-sm text-gray-500">Awarded on: {new Date(prize.awardedAt).toLocaleDateString()}</p>
