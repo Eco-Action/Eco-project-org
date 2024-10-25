@@ -38,7 +38,7 @@ export default function PlasticInfoSection() {
     return (
         <section className="bg-white py-16">
             <div className="max-w-7xl mx-auto text-center px-4">
-                <h2 className="text-4xl font-bold text-green mb-4">Let's save our mother Earth</h2>
+                <h2 className="text-4xl font-bold text-blue mb-4">Let's save our mother Earth</h2>
                 <p className="text-gray-600 mb-12">
                 Together, we can create a future where every choice we make helps restore and preserve our planet for generations to come. Lets turn small actions into a global impact.
                 </p>

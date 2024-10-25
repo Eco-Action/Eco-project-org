@@ -5,7 +5,7 @@ export default function OurValues() {
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-4 text-center">
-                <h2 className="text-3xl font-bold text-green mb-8">Our Values</h2>
+                <h2 className="text-3xl font-bold text-blue mb-8">Our Values</h2>
                 <p className="text-lg text-gray-700 mb-12">
                     We believe in a sustainable future built on the principles of innovation, responsibility, and community.
                     Our core values guide every decision we make as we strive to protect the environment and uplift society.

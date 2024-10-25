@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Loading from '@/components/Loading';
 const UserEvent = () => {
   const [events, setEvents] = useState([]); // Rename posts to events
   const [error, setError] = useState(null);
@@ -33,7 +33,11 @@ const UserEvent = () => {
     }
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    return (
+      <Loading/>
+    );
+  }
   if (error) return <p>{error}</p>;
 
   return (

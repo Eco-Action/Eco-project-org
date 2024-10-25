@@ -1,7 +1,7 @@
  
 import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
-
+import Loading from '@/components/Loading';
 const EventCard = ({ event, onJoin }) => (
   <div className="bg-white rounded-lg shadow-md p-4 mb-4">
     <h3 className="text-lg font-semibold text-green mb-2">{event.title}</h3>
@@ -96,8 +96,11 @@ const EventSharing = ({ searchQuery }) => {
   );
 
   if (loading) {
-    return <p>Loading events...</p>;
+    return (
+      <Loading/>
+    );
   }
+
 
   return (
     <div>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-
+import Loading from '@/components/Loading';
 const Post = ({ post, searchQuery }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likesCount, setLikesCount] = useState(post.likes.length);
@@ -112,7 +112,10 @@ const Post = ({ post, searchQuery }) => {
           className="mt-4 space-y-2"
         >
           {loadingComments ? (
-            <p className="text-sm text-gray-600">Loading comments...</p>
+          
+                <Loading/>
+              
+          
           ) : comments.length > 0 ? (
             comments.map((comment, index) => (
               <motion.div 
@@ -177,12 +180,12 @@ const Posts = ({ searchQuery }) => {
     post.user.username.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  if (loading) return (
-    <div className="flex justify-center items-center h-64">
-      <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green"></div>
-    </div>
-  );
-  
+  if (loading) {
+    return (
+      <Loading/>
+    );
+  }
+
   if (error) return <p className="text-red-500 text-center">{error}</p>;
 
   return (

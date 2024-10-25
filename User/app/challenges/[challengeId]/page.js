@@ -8,7 +8,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../../services/firebase';
 import Swal from 'sweetalert2';
 import { Calendar, Award, TrendingUp, Upload, Info, CheckCircle, XCircle, Loader, Recycle, Trash2, Water, Wind } from 'lucide-react';
-
+import Loading from '@/components/Loading';
 const ChallengeDetails = () => {
   const { challengeId } = useParams();
   const router = useRouter();
@@ -112,16 +112,10 @@ const ChallengeDetails = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-white">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-        >
-          <Recycle className="w-16 h-16 text-green" />
-        </motion.div>
-      </div>
+      <Loading/>
     );
   }
+
 
   if (error) {
     return (
@@ -156,7 +150,7 @@ const ChallengeDetails = () => {
   }
 
   return (
-    <div className=" p-20 bg-gray-200 min-h-screen">
+    <div className=" p-20 bg-gray-100 min-h-screen">
       <AnimatePresence>
         {showUploadModal && (
           <UploadProgressModal progress={uploadProgress} />
@@ -167,7 +161,7 @@ const ChallengeDetails = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl font-bold mb-6 text-center text-green"
+        className="text-4xl font-bold mb-6 text-center text-blue mt-12"
       >
         {challenge.title}
       </motion.h1>
@@ -189,7 +183,7 @@ const ChallengeDetails = () => {
       >
         <DetailCard icon={Info} label="Instructions" value={challenge.instructions} />
         <DetailCard icon={Award} label="Points" value={challenge.points} />
-        <DetailCard icon={TrendingUp} label="Total Impact" value={challenge.totalImpact} />
+        <DetailCard icon={TrendingUp}   label="Total Impact for Reducing Plastic"  value={challenge.totalImpact} />
         <DetailCard icon={Recycle} label="Impact Type" value={challenge.impactType} />
       </motion.div>
 
@@ -254,14 +248,14 @@ const UploadProgressModal = ({ progress }) => {
   );
 };
 
-const DetailCard = ({ icon: Icon, label, value }) => (
+const DetailCard = ({ icon: Icon, label, value,iconColor = 'text-blueD' }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     className="bg-white rounded-lg shadow-md p-6 overflow-hidden transition-all duration-300 hover:shadow-lg"
   >
     <div className="flex items-center">
-      <Icon className="w-10 h-10 text-green-600 mr-4" />
-      <div>
+    <Icon className={`w-6 h-6 mr-4 ${iconColor}`} />
+    <div>
         <p className="text-sm font-semibold text-gray-600">{label}</p>
         <p className="text-lg text-gray-800">{value}</p>
       </div>
